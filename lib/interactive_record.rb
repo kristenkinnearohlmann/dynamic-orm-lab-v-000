@@ -24,6 +24,10 @@ class InteractiveRecord
     DB[:conn].execute("SELECT * FROM #{table_name} WHERE name = ?", name)
   end
 
+  def self.find_by
+
+  end
+
   def initialize(options={})
     options.each do |property, value|
       self.send("#{property}=", value)
