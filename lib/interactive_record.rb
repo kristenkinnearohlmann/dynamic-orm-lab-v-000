@@ -25,7 +25,10 @@ class InteractiveRecord
   end
 
   def self.find_by(attribute)
-    binding.pry
+
+    field_name = attribute.keys.first.to_s
+    val = attribute.values[0]
+    
   end
 
   def initialize(options={})
