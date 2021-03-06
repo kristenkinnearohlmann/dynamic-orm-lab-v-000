@@ -29,7 +29,7 @@ class InteractiveRecord
     field_name = attribute.keys.first.to_s
     field_value = attribute.values[0]
 
-    DB[:conn].execute("SELECT * FROM #{table_name} WHERE #{field_name} = #{field_value}")
+    DB[:conn].execute("SELECT * FROM #{table_name} WHERE #{field_name} = '#{field_value}'")
 
   end
 
