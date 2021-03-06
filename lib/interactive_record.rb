@@ -49,7 +49,7 @@ class InteractiveRecord
     vals = self.values_for_insert
 
     DB[:conn].execute("INSERT INTO ? (?) VALUES (?)", table_name, col_names, vals)
-    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM ?", table_name).flatten
+    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM ?", table_name)[0][0]
   end
 
 end
