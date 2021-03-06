@@ -20,6 +20,10 @@ class InteractiveRecord
     column_names.compact
   end
 
+  def self.find_by_name(name)
+
+  end
+
   def initialize(options={})
     options.each do |property, value|
       self.send("#{property}=", value)
