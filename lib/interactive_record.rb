@@ -28,7 +28,7 @@ class InteractiveRecord
 
     field_name = attribute.keys.first.to_s
     val = attribute.values[0]
-    
+
   end
 
   def initialize(options={})
