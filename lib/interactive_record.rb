@@ -27,9 +27,9 @@ class InteractiveRecord
   def self.find_by(attribute)
 
     field_name = attribute.keys.first.to_s
-    value = attribute.values[0]
+    field_value = attribute.values[0]
 
-    DB[:conn].execute("SELECT * FROM #{table_name} WHERE #{field_name} = #{value}")
+    DB[:conn].execute("SELECT * FROM #{table_name} WHERE #{field_name} = #{field_value}")
 
   end
 
