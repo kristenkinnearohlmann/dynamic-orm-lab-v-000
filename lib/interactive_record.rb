@@ -29,6 +29,8 @@ class InteractiveRecord
     field_name = attribute.keys.first.to_s
     val = attribute.values[0]
 
+    DB[:conn].execute("SELECT * FROM #{table_name} WHERE #{field_name} = #{value}")
+
   end
 
   def initialize(options={})
