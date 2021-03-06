@@ -35,7 +35,12 @@ class InteractiveRecord
   end
 
   def values_for_insert
+    values = []
 
+    self.class.column_names.each do |col_name|
+      values << self.send('#{col_name}') unless self.send(col_name).nil?
+      end
+    end
   end
 
 end
